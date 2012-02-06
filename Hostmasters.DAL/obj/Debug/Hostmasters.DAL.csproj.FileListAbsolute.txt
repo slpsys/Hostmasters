@@ -1,0 +1,13 @@
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Hostmasters.DAL.dll
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Hostmasters.DAL.pdb
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\System.Data.SQLite.dll
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\System.Data.SQLite.Linq.dll
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\obj\Debug\ResolveAssemblyReference.cache
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\obj\Debug\Hostmasters.DAL.dll
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\obj\Debug\Hostmasters.DAL.pdb
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Hostmasters.DAL.dll.config
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\EntityFramework.dll
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Ninject.dll
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\EntityFramework.xml
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Ninject.pdb
+c:\users\marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Ninject.xml

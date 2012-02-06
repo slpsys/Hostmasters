@@ -1,0 +1,7 @@
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Tests\bin\Debug\Hostmasters.Tests.dll
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Tests\bin\Debug\Hostmasters.Tests.pdb
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Tests\bin\Debug\Hostmasters.exe
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Tests\bin\Debug\Hostmasters.pdb
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Tests\obj\Debug\Hostmasters.Tests.dll
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Tests\obj\Debug\Hostmasters.Tests.pdb

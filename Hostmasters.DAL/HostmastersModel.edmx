@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl" Namespace="HostmastersModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="HostmastersModelTargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="HostmastersModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="HostmastersModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Hosts" EntityType="HostmastersModel.Host" />
+          <EntitySet Name="HostSets" EntityType="HostmastersModel.HostSet" />
+          <AssociationSet Name="HostSetHost" Association="HostmastersModel.HostSetHost">
+            <End Role="HostSet" EntitySet="HostSets" />
+            <End Role="Host" EntitySet="Hosts" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Host">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="HostName" Nullable="false" />
+          <Property Type="String" Name="IpAddress" Nullable="false" />
+          <Property Type="String" Name="Comment" />
+          <Property Type="DateTime" Name="AdditionTime" Nullable="false" />
+          <Property Type="DateTime" Name="ModificationTime" Nullable="false" />
+          <NavigationProperty Name="HostSet" Relationship="HostmastersModel.HostSetHost" FromRole="Host" ToRole="HostSet" />
+        </EntityType>
+        <EntityType Name="HostSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="AdditionTime" Nullable="false" />
+          <Property Type="DateTime" Name="ModificationTime" Nullable="false" />
+          <NavigationProperty Name="Hosts" Relationship="HostmastersModel.HostSetHost" FromRole="HostSet" ToRole="Host" />
+        </EntityType>
+        <Association Name="HostSetHost">
+          <End Type="HostmastersModel.HostSet" Role="HostSet" Multiplicity="1" />
+          <End Type="HostmastersModel.Host" Role="Host" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="HostmastersModel" />
+        <Alias Key="Target" Value="HostmastersModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="HostmastersModelContainer" StorageEntityContainer="HostmastersModelTargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="HostmastersModel" >
+        <EntityTypeShape EntityType="HostmastersModel.Host" Width="1.5" PointX="1.875" PointY="0.75" Height="2.364889322916667" />
+        <EntityTypeShape EntityType="HostmastersModel.HostSet" Width="1.5" PointX="4.5" PointY="0.75" Height="2.172587890625" />
+        <AssociationConnector Association="HostmastersModel.HostSetHost">
+          <ConnectorPoint PointX="4.5" PointY="1.8362939453125" />
+          <ConnectorPoint PointX="3.375" PointY="1.8362939453125" />
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

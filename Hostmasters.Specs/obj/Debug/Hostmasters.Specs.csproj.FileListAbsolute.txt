@@ -1,0 +1,9 @@
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Specs\bin\Debug\Hostmasters.Specs.dll.config
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Specs\bin\Debug\Hostmasters.Specs.dll
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Specs\bin\Debug\Hostmasters.Specs.pdb
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Specs\bin\Debug\TechTalk.SpecFlow.dll
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Specs\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Specs\obj\Debug\Hostmasters.Specs.dll
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.Specs\obj\Debug\Hostmasters.Specs.pdb
+C:\Users\Marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.Specs\bin\Debug\Hostmasters.DAL.dll
+C:\Users\Marc\documents\visual studio 2010\Projects\Hostmasters\Hostmasters.Specs\bin\Debug\Hostmasters.DAL.pdb
