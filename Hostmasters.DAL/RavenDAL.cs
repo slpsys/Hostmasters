@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using Raven.Client.Document;
+using Raven.Client.Embedded;
 
 namespace Hostmasters.DAL
 {
@@ -11,19 +12,27 @@ namespace Hostmasters.DAL
 	{
 		#region Fields
 
-		private const string DEFAULT_DB_NAME = @"./Hostmasters.db";
+		private const string DEFAULT_DB_NAME = @"Hostmasters.db";
 		private bool _Disposed = false;
+		private EmbeddableDocumentStore store;
 
 		#endregion
 
 		#region Constructors
 
-		public RavenDAL() : this(DEFAULT_DB_NAME)
-		{
-		}
+		/// <summary>
+		/// Initializes a new instance of the <see cref="RavenDAL"/> class.
+		/// </summary>
+		public RavenDAL() : this(DEFAULT_DB_NAME) { }
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="RavenDAL"/> class.
+		/// </summary>
+		/// <param name="dbName">Name of the db.</param>B
 		public RavenDAL(string dbName)
 		{
+			this.store = new EmbeddableDocumentStore() { DataDirectory = DEFAULT_DB_NAME };
+			this.store.Initialize();
 		}
 
 		#endregion
@@ -65,12 +74,17 @@ namespace Hostmasters.DAL
 			throw new NotImplementedException();
 		}
 
-		public Stream BuildHostsFile()
+		public HostSet CreateSet(HostSet set)
 		{
-			throw new NotImplementedException();
+			using (var session = this.store.OpenSession())
+			{
+				session.Store(set);
+				session.SaveChanges();
+			}
+			return set;
 		}
 
-		public HostSet CreateSet(HostSet set)
+		public Stream BuildHostsFile()
 		{
 			throw new NotImplementedException();
 		}
@@ -101,7 +115,7 @@ namespace Hostmasters.DAL
 		{
 			if (disposing && !this._Disposed)
 			{
-				// Raven stuff here?
+				this.store.Dispose();
 				this._Disposed = true;
 			}	
 		}

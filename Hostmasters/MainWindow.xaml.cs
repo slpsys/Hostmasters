@@ -22,6 +22,9 @@ namespace Hostmasters
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			var dal = new Hostmasters.DAL.RavenDAL();
+			dal.CreateSet(new Hostmasters.DAL.HostSet() { Name = "butt", Id = 0, Active = true });
 		}
 	}
 }

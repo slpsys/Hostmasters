@@ -27,7 +27,7 @@ namespace Hostmasters.DAL
 		private bool _Active;	
 		public bool Active
 		{
-			get { return this.Active; }
+			get { return this._Active; }
 			set
 			{
 				this.LastModificationTime = DateTime.Now;
@@ -35,6 +35,7 @@ namespace Hostmasters.DAL
 			}
 		}
 
+		public int Id { get; set; }
 		public List<Host> Hosts { get; set; }
 		public DateTime CreationTime { get; private set; }
 		public DateTime LastModificationTime { get; private set; }
