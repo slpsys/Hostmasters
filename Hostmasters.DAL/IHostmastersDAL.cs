@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace Hostmasters.DAL
 {
 	public interface IHostmastersDAL
 	{
-		void CreateHost(Host host);
-		void DeleteHost(Host host);
-
 		void AddHostToSet(Host host, HostSet set);
 		void RemoveHostFromSet(Host host, HostSet set);
 		ICollection<Host> ListHosts(HostSet set);
 
-		HostSet CreateSet();
-		void ActivateSet(HostSet set);
-		void DeactivateSet(HostSet set);
-		void DeleteSet(HostSet set);
+		HostSet CreateSet(HostSet set);
+		HostSet ActivateSet(HostSet set);
+		HostSet DeactivateSet(HostSet set);
+		HostSet DeleteSet(HostSet set);
 		ICollection<HostSet> ListSets();
 
-		string BuildHostsFile();
+		Stream BuildHostsFile();
+		void ParseHostsFile(Stream input);
 	}
 }

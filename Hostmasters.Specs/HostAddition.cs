@@ -16,7 +16,7 @@ namespace Hostmasters.Specs
 		public void GivenIHaveANewHostWithAddressForHost(string addr, string host)
 		{
 			ScenarioContext.Current.Pending();
-			ScenarioContext.Current.Add("host", new Host() { IpAddress = addr, HostName = host });
+			ScenarioContext.Current.Add("host", new Host() { IpAddress = addr, Hostname = host });
 		}
 
 		[Given("I have a HostSet named (.*)")]
@@ -39,7 +39,7 @@ namespace Hostmasters.Specs
 		{
 			ScenarioContext.Current.Pending();
 			var result = (ICollection<HostSet>)ScenarioContext.Current["result"];
-			Assert.IsTrue(result.Any(x => x.Name == name && x.Hosts.Any(h => h.IpAddress == address && h.HostName.ToLower() == host.ToLower())));
+			Assert.IsTrue(result.Any(x => x.Name == name && x.Hosts.Any(h => h.IpAddress == address && h.Hostname.ToLower() == host.ToLower())));
 		}
 	}
 }
