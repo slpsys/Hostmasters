@@ -101,7 +101,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers.cs" />
     <Compile Include="Host.cs" />
+    <Compile Include="Hostmaster.cs" />
     <Compile Include="HostSet.cs" />
     <Compile Include="IHostmastersDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

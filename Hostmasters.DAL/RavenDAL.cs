@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using Raven.Client.Document;
 using Raven.Client.Embedded;
+using Raven.Client;
 
 namespace Hostmasters.DAL
 {
@@ -39,41 +40,96 @@ namespace Hostmasters.DAL
 
 		#region DAL methods
 
+		/// <summary>
+		/// Adds the host to set.
+		/// </summary>
+		/// <param name="host">The host.</param>
+		/// <param name="set">The set.</param>
 		public void AddHostToSet(Host host, HostSet set)
 		{
-			throw new NotImplementedException();
+			using (var session = this.store.OpenSession())
+			{
+				var dalSet = session.Get(set);
+				dalSet.Hosts.Add(host);
+				session.SaveChanges();
+			}
 		}
 
+		/// <summary>
+		/// Removes the host from set.
+		/// </summary>
+		/// <param name="host">The host.</param>
+		/// <param name="set">The set.</param>
 		public void RemoveHostFromSet(Host host, HostSet set)
 		{
-			throw new NotImplementedException();
+			using (var session = this.store.OpenSession())
+			{
+				var dalSet = session.Get(set);
+				dalSet.Hosts.Remove(host);
+				session.SaveChanges();
+			}
 		}
 
-		public ICollection<Host> ListHosts(HostSet set)
-		{
-			throw new NotImplementedException();
-		}
-
+		/// <summary>
+		/// Activates the set.
+		/// </summary>
+		/// <param name="set">The set.</param>
+		/// <returns></returns>
 		public HostSet ActivateSet(HostSet set)
 		{
-			throw new NotImplementedException();
+			return ToggleSetActivation(set, true);
 		}
 
+		/// <summary>
+		/// Deactivates the set.
+		/// </summary>
+		/// <param name="set">The set.</param>
+		/// <returns></returns>
 		public HostSet DeactivateSet(HostSet set)
 		{
-			throw new NotImplementedException();
+			return ToggleSetActivation(set, true);
 		}
 
+		/// <summary>
+		/// Deletes the set.
+		/// </summary>
+		/// <param name="set">The set.</param>
+		/// <returns></returns>
 		public HostSet DeleteSet(HostSet set)
 		{
-			throw new NotImplementedException();
+			using (var session = this.store.OpenSession())
+			{
+				var result = session.Get(set);
+				if (result != null)
+				{
+					session.Delete(result);
+					session.SaveChanges();
+				}
+			}	
+			return set;
 		}
 
+		/// <summary>
+		/// Lists the sets.
+		/// </summary>
+		/// <returns></returns>
 		public ICollection<HostSet> ListSets()
 		{
-			throw new NotImplementedException();
+			var sets = new List<HostSet>();
+			using (var session = this.store.OpenSession())
+			{
+				var result = from set in session.Query<HostSet>()
+							 select set;
+				sets = result.ToList();
+			}
+			return sets;
 		}
 
+		/// <summary>
+		/// Creates the set.
+		/// </summary>
+		/// <param name="set">The set.</param>
+		/// <returns></returns>
 		public HostSet CreateSet(HostSet set)
 		{
 			using (var session = this.store.OpenSession())
@@ -92,6 +148,21 @@ namespace Hostmasters.DAL
 		public void ParseHostsFile(Stream input)
 		{
 			throw new NotImplementedException();
+		}
+
+		#endregion
+
+		#region Helpers
+
+		protected HostSet ToggleSetActivation(HostSet set, bool value)
+		{
+			using (var session = this.store.OpenSession())
+			{
+				var dalSet = session.Get(set);
+				dalSet.Active = value;
+				session.SaveChanges();
+			}
+			return set;
 		}
 
 		#endregion

@@ -9,7 +9,6 @@ C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Lucene.Net.Contrib.SpellChecker.dll
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Lucene.Net.dll
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Ninject.dll
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\NLog.dll
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Raven.Abstractions.dll
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Raven.Client.Embedded.dll
@@ -31,8 +30,6 @@ C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Lucene.Net.Contrib.SpellChecker.xml
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Ninject.pdb
-C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Ninject.xml
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\NLog.xml
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Raven.Abstractions.pdb
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Raven.Abstractions.xml
@@ -50,3 +47,6 @@ C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\obj\Debug\Hostmasters.DAL.dll
 C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\obj\Debug\Hostmasters.DAL.pdb
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Ninject.dll
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Ninject.pdb
+C:\Users\Marc\Documents\Visual Studio 2010\Projects\Hostmasters\Hostmasters.DAL\bin\Debug\Ninject.xml

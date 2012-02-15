@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Hostmasters.DAL;
+using Ninject;
 
 namespace Hostmasters
 {
@@ -19,12 +21,22 @@ namespace Hostmasters
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		/// <summary>
+		/// Gets or sets the controller.
+		/// </summary>
+		/// <value>The controller.</value>
+		public Hostmaster controller { get; set; }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="MainWindow"/> class.
+		/// </summary>
 		public MainWindow()
 		{
 			InitializeComponent();
-
-			var dal = new Hostmasters.DAL.RavenDAL();
-			dal.CreateSet(new Hostmasters.DAL.HostSet() { Name = "butt", Id = 0, Active = true });
+			
+			IKernel kernel = new StandardKernel();
+			kernel.Bind<IHostmastersDAL>().To<RavenDAL>();
+			this.controller = kernel.Get<Hostmaster>();
 		}
 	}
 }

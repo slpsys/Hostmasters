@@ -10,7 +10,6 @@ namespace Hostmasters.DAL
 	{
 		void AddHostToSet(Host host, HostSet set);
 		void RemoveHostFromSet(Host host, HostSet set);
-		ICollection<Host> ListHosts(HostSet set);
 
 		HostSet CreateSet(HostSet set);
 		HostSet ActivateSet(HostSet set);
